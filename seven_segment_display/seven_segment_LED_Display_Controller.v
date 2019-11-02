@@ -1,13 +1,10 @@
 `timescale 1ns / 1ps
 
 module seven_segment_LED_Display_Controller(
-// fpga4student.com: FPGA projects, Verilog projects, VHDL projects
-// FPGA tutorial: seven-segment LED display controller on Basys  3 FPGA
     input clock_100Mhz, // 100 Mhz clock source on Basys 3 FPGA
     input reset, // reset
     output reg [3:0] Anode_Activate, // anode signals of the 7-segment LED display
-    output reg [6:0] LED_out// cathode patterns of the 7-segment LED display
-    );
+    output reg [6:0] LED_out// cathode patterns of the 7-segment LED display);
     reg [26:0] one_second_counter; // counter for generating 1 second clock enable
     wire one_second_enable;// one second enable for counting numbers
     reg [15:0] displayed_number; // counting number to be displayed
